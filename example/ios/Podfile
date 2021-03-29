@@ -57,6 +57,7 @@ target 'KarteExample' do
   pod 'RNKRTInAppMessaging', :path => '../../packages/in-app-messaging'
   pod 'RNKRTNotification', :path => '../../packages/notification'
   pod 'RNKRTVariables', :path => '../../packages/variables'
+  pod 'RNKRTVisualTracking', :path => '../../packages/visual-tracking'
 
   use_native_modules!
 

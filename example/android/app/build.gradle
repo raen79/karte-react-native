@@ -214,6 +214,7 @@ dependencies {
     implementation project(':RNKRTInAppMessaging')
     implementation project(':RNKRTNotification')
     implementation project(':RNKRTVariables')
+    implementation project(':RNKRTVisualTracking')
 }
 
 // Run this once to be able to run the application with BUCK
