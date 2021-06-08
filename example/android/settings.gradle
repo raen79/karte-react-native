@@ -13,23 +13,12 @@ project(':RNKRTNotification').projectDir = new File(rootProject.projectDir, '../
 
 include ':RNKRTVariables'
 project(':RNKRTVariables').projectDir = new File(rootProject.projectDir, '../../packages/variables/android')
-//
-//include ':RNKRTVisualTracking'
-//project(':RNKRTVisualTracking').projectDir = new File(rootProject.projectDir, '../../packages/visual-tracking/android')
-//
-//include ':core'
-//project(':core').projectDir = new File(rootProject.projectDir, '../../../karte-android-tools/libraries/core')
-//include ':inappmessaging'
-//project(':inappmessaging').projectDir = new File(rootProject.projectDir, '../../../karte-android-tools/libraries/inappmessaging')
-//include ':notifications'
-//project(':notifications').projectDir = new File(rootProject.projectDir, '../../../karte-android-tools/libraries/notifications')
-//include ':variables'
-//project(':variables').projectDir = new File(rootProject.projectDir, '../../../karte-android-tools/libraries/variables')
-//include ':visualtracking'
-//project(':visualtracking').projectDir = new File(rootProject.projectDir, '../../../karte-android-tools/libraries/visualtracking')
-//
-//includeBuild('../../../karte-android-dev/gradle-plugin') {
-//    dependencySubstitution {
-//        substitute module('io.karte.android:karte-gradle-plugin') with project(':')
-//    }
-//}
+
+include ':RNKRTVisualTracking'
+project(':RNKRTVisualTracking').projectDir = new File(rootProject.projectDir, '../../packages/visual-tracking/android')
+
+includeBuild('../../..//karte-android-tools/libraries/gradle-plugin') {
+    dependencySubstitution {
+        substitute module('io.karte.android:local-gradle-plugin') with project(':')
+    }
+}
