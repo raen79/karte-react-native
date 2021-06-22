@@ -15,10 +15,25 @@
 //
 
 import { NativeModules } from 'react-native';
-type VisualTrackingType = {
-  multiply(a: number, b: number): Promise<number>;
-};
+import type { KRTVisualTrackingNativeModule } from './types';
 
-const { VisualTracking } = NativeModules;
+const nativeModule: KRTVisualTrackingNativeModule =
+  NativeModules.RNKRTVisualTrackingModule;
 
-export default VisualTracking as VisualTrackingType;
+/** */
+export class VisualTracking {
+  private constructor() {}
+  /**
+   * handle
+   */
+  public static handle(action: String, actionId?: String, targetText?: String) {
+    nativeModule.handle(action, actionId, targetText);
+  }
+
+  /**
+   * view
+   */
+  public static view(action: String) {
+    nativeModule.view(action);
+  }
+}

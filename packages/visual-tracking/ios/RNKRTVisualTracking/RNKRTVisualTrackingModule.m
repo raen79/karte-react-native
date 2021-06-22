@@ -14,7 +14,29 @@
 //  limitations under the License.
 //
 
-export interface KRTVisualTrackingNativeModule {
-  handle(action: String, actionId?: String, targetText?: String): void;
-  view(action: String): void;
+#import "RNKRTVisualTrackingModule.h"
+#import "RNKRTVisualTracking-Swift.h"
+
+@implementation RNKRTVisualTrackingModule
+
++ (BOOL)requiresMainQueueSetup {
+    return YES;
 }
+
+- (dispatch_queue_t)methodQueue {
+    return dispatch_get_main_queue();
+}
+
+RCT_EXPORT_MODULE()
+
+RCT_EXPORT_METHOD(handle:(NSString *)action actionId:(nullable NSString *)actionId targetText:(nullable NSString *)targetText)
+{
+    [KRTVisualTrackingWrapper handle:action actionId:actionId targetText:targetText];
+}
+
+RCT_EXPORT_METHOD(view:(NSString *)action)
+{
+    [KRTVisualTrackingWrapper view:action];
+}
+
+@end

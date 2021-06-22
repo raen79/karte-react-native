@@ -142,18 +142,23 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.6.0):
     - GoogleUtilities/Logger
-  - KarteCore (2.8.0):
-    - KarteUtilities (~> 3.1)
-  - KarteInAppMessaging (2.6.0):
+  - KarteCore (2.15.0):
+    - KarteUtilities (~> 3.3)
+  - KarteInAppMessaging (2.9.0):
     - KarteCore (~> 2.3)
     - KarteUtilities (~> 3.0)
-  - KarteRemoteNotification (2.4.0):
+  - KarteRemoteNotification (2.5.0):
     - KarteCore (~> 2.0)
     - KarteUtilities (~> 3.0)
-  - KarteUtilities (3.1.0)
+  - KarteUtilities (3.3.0):
+    - KarteUtilities/standard (= 3.3.0)
+  - KarteUtilities/standard (3.3.0)
   - KarteVariables (2.1.0):
     - KarteCore (~> 2.0)
     - KarteUtilities (~> 3.0)
+  - KarteVisualTracking (2.6.0):
+    - KarteCore (~> 2.0)
+    - KarteUtilities (~> 3.1)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -397,7 +402,7 @@ PODS:
   - RNKRTCore (1.0.0):
     - KarteCore
     - React
-  - RNKRTInAppMessaging (1.0.0):
+  - RNKRTInAppMessaging (1.0.1):
     - KarteInAppMessaging
     - React
     - RNKRTCore
@@ -407,6 +412,10 @@ PODS:
     - RNKRTCore
   - RNKRTVariables (1.0.0):
     - KarteVariables
+    - React
+    - RNKRTCore
+  - RNKRTVisualTracking (0.1.0):
+    - KarteVisualTracking
     - React
     - RNKRTCore
   - Yoga (1.14.0)
@@ -452,6 +461,7 @@ DEPENDENCIES:
   - RNKRTInAppMessaging (from `../../packages/in-app-messaging`)
   - RNKRTNotification (from `../../packages/notification`)
   - RNKRTVariables (from `../../packages/variables`)
+  - RNKRTVisualTracking (from `../../packages/visual-tracking`)
   - Yoga (from `../../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -482,6 +492,7 @@ SPEC REPOS:
     - KarteRemoteNotification
     - KarteUtilities
     - KarteVariables
+    - KarteVisualTracking
     - nanopb
     - OpenSSL-Universal
     - PromisesObjC
@@ -549,6 +560,8 @@ EXTERNAL SOURCES:
     :path: "../../packages/notification"
   RNKRTVariables:
     :path: "../../packages/variables"
+  RNKRTVisualTracking:
+    :path: "../../packages/visual-tracking"
   Yoga:
     :path: "../../node_modules/react-native/ReactCommon/yoga"
 
@@ -579,11 +592,12 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 9a8a16f79feffc7f42096743de2a7c4815e84020
   GoogleDataTransportCCTSupport: 489c1265d2c85b68187a83a911913d190012158d
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
-  KarteCore: b171d3bbc33c6c19b9a071a4c714f7d2bd91a988
-  KarteInAppMessaging: b964eb95370ace959b7df9c051e6157b252c9db7
-  KarteRemoteNotification: 6c3836cf3fe7679c876c4e377aa7b3ae9fa0d900
-  KarteUtilities: ccc63f2916deb45485d1b2b63516a98b5ecba773
+  KarteCore: 7eb6d530dfdbbd138f31124554855ccb3051d6ca
+  KarteInAppMessaging: 16e113c50eb247632b05c3d8c904d7d05084a921
+  KarteRemoteNotification: 8cf6830974cb3bb58808d5ffdb09667bd9038e8d
+  KarteUtilities: 87d79d20649710937f9bfd4961d369bf77105152
   KarteVariables: 263a5244f2b9524ad3ea2b40ba2aaa57748accd0
+  KarteVisualTracking: 72b4d4e8c4c37fce4401d6f7a3f23b7718de4eeb
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
@@ -610,12 +624,13 @@ SPEC CHECKSUMS:
   RNFBApp: 6fd8a7e757135d4168bf033a8812c241af7363a0
   RNFBMessaging: 3e457bb1889607510ad80575c2afaf8080744703
   RNKRTCore: c7a30297a0099fce825b46819f8bfeb2d6a5126d
-  RNKRTInAppMessaging: 81a07e1ee4eecc03ca0102f2199becc7e319f87e
+  RNKRTInAppMessaging: 610781bcb5eeedecbca87f8b424117c27dd02681
   RNKRTNotification: f4ffa6ffff811b834e5603ddc48fe02ec162b7d0
   RNKRTVariables: 1e9d140da5c93e810c48e00fe9b902f0975e0107
+  RNKRTVisualTracking: 6cda18bbb0fc2704f9aed6faff2663b3546d195a
   Yoga: 3ebccbdd559724312790e7742142d062476b698e
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 2346a269d8ea604edffae76a27e7e612353dfac8
+PODFILE CHECKSUM: d7e7fb816db8bc1e53e704141c4730ecb01d50a1
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

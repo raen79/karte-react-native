@@ -24,7 +24,6 @@ import android.view.ViewGroup
 import android.view.ViewParent
 import android.widget.TextView
 
-
 internal val View.actionId: String
   get() {
     var target: View? = this
@@ -54,6 +53,7 @@ internal val View.actionId: String
     }
     return sb.toString()
   }
+
 internal val View.targetText: String?
   get() {
     if (this is ViewGroup) {
@@ -89,4 +89,9 @@ internal val View.bitmap: Bitmap
     canvas.drawColor(backgroundColor)
     draw(canvas)
     return bitmap
+  }
+
+internal val Activity.contentView: View
+  get() {
+    return findViewById(android.R.id.content)
   }

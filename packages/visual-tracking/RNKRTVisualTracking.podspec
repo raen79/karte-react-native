@@ -14,10 +14,11 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/plaidev/karte-react-native.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
-
+  
+  s.swift_versions = [5.1]
   s.static_framework = true
 
-  s.dependency "React-Core"
+  s.dependency "React"
   s.dependency "RNKRTCore"
 	s.dependency "KarteVisualTracking"
 end
