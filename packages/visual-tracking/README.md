@@ -7,7 +7,7 @@ React Native KARTE provides native integration of KARTE for both Android & iOS. 
 ## Installation
 
 ```
-yarn add @react-native-karte/variables
+yarn add @react-native-karte/visual-tracking
 ```
 
 ## Documentation
@@ -15,7 +15,7 @@ The developer guide is located at
 - [Developer Portal - KARTE React Native SDK](https://developers.karte.io/docs/react-native-sdk-v2)
 
 ## License
-React Native KARTE Variables module is published under the Apache 2.0 License.
+React Native KARTE Visual tracking module is published under the Apache 2.0 License.
 
 Your use of KARTE is governed by the [KARTE Terms of Use](https://karte.io/legal/terms-of-use-en.html).
 

@@ -16,9 +16,3 @@ project(':RNKRTVariables').projectDir = new File(rootProject.projectDir, '../../
 
 include ':RNKRTVisualTracking'
 project(':RNKRTVisualTracking').projectDir = new File(rootProject.projectDir, '../../packages/visual-tracking/android')
-
-includeBuild('../../..//karte-android-tools/libraries/gradle-plugin') {
-    dependencySubstitution {
-        substitute module('io.karte.android:local-gradle-plugin') with project(':')
-    }
-}
