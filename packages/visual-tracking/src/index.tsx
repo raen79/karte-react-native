@@ -20,18 +20,30 @@ import type { KRTVisualTrackingNativeModule } from './types';
 const nativeModule: KRTVisualTrackingNativeModule =
   NativeModules.RNKRTVisualTrackingModule;
 
-/** */
+/** ビジュアルトラッキングの管理を行うクラスです。  */
 export class VisualTracking {
   private constructor() {}
   /**
-   * handle
+   * 操作ログをハンドルします。
+   *
+   * @remarks
+   * 操作ログはペアリング時のみ送信されます。 イベント発火条件定義に操作ログがマッチした際にビジュアルイベントが送信されます。
+   *
+   * @param action アクション名
+   * @param actionId アクションID（アクションIDにはアプリ再起動時も変化しない一意なIDを設定してください。）
+   * @param targetText ターゲット文字列（Viewコンポーネントのタイトルなど）
    */
   public static handle(action: String, actionId?: String, targetText?: String) {
     nativeModule.handle(action, actionId, targetText);
   }
 
   /**
-   * view
+   * 画面遷移ログをハンドルします。
+   *
+   * @remarks
+   * 画面遷移ログはペアリング時のみ送信されます。 イベント発火条件定義に画面遷移ログがマッチした際にビジュアルイベントが送信されます。
+   *
+   * @param action アクション名
    */
   public static view(action: String) {
     nativeModule.view(action);

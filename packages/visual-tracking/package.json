@@ -22,13 +22,12 @@
     "!**/__mocks__"
   ],
   "scripts": {
-    "typescript": "tsc --noEmit",
     "prepare": "bob build",
-    "bootstrap": "yarn"
-  },
-  "aa": {
-    "pods": "cd example && pod-install --quiet",
-    "bootstrap": "yarn example && yarn && yarn pods"
+    "build": "bob build",
+    "build:clean": "del lib",
+    "docs": "typedoc src/index.tsx --excludePrivate",
+    "docs:clean": "del docs",
+    "test": "jest"
   },
   "keywords": [
     "react-native",
@@ -70,12 +69,7 @@
     "targets": [
       "commonjs",
       "module",
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
+      "typescript"
     ]
   }
 }
